@@ -1,16 +1,16 @@
-bin:
-	gcc -g -fprofile-arcs -ftest-coverage -o main main.c
+bin: main.cpp
+	g++ -g -fprofile-arcs -ftest-coverage -o main $<
 
-run:bin
+run: bin
 	./main
 
-gcov:run
-	gcov -b main.c
+gcov: run
+	gcov -b main.cpp
 
-lcov:gcov
+lcov: gcov
 	lcov --no-markers --rc lcov_branch_coverage=1 --capture --directory . --output-file main_coverage.info
 
-html:lcov
+html: lcov
 	genhtml --branch-coverage -o coverage_reports/ main_coverage.info
 
 json:run

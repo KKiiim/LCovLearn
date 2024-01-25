@@ -1,1 +1,6 @@
 coverage_reports
+main
+main.cpp.gcov
+main.gcda
+main.gcno
+main_coverage.info
