@@ -17,6 +17,6 @@ json:run
 	gcov main.gcda --json
 	gzip -dk main.gcov.json.gz
 
-dump: bin
+dump: run
 	gcov-dump -l -p ./main.gcno
 	gcov-dump ./main.gcda
