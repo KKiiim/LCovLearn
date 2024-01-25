@@ -4,3 +4,5 @@ main.cpp.gcov
 main.gcda
 main.gcno
 main_coverage.info
+main.gcov.json
+main.gcov.json.gz
